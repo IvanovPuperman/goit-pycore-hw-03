@@ -7,7 +7,6 @@ def get_days_from_today(date: str) -> int:
     try:
         target = datetime.strptime(date, "%Y-%m-%d").date()
         today = datetime.today().date()
-        
         delta = today - target
         print(delta.days)
         return delta.days
