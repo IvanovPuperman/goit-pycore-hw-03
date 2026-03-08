@@ -7,3 +7,13 @@ def normalize_phone(phone_number):
         return "+" + phone
 
     return "+38" + phone
+
+raw_numbers = [
+    "067\t123 4567",
+    "(095) 234-5678\n",
+    "+380 44 123 4567",
+    "380501234567"
+]
+sanitized_numbers = [normalize_phone(num) for num in raw_numbers]
+
+print(sanitized_numbers)
